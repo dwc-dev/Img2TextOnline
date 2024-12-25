@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  flask_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000" # 映射主机的8000端口到容器的8000端口
+    restart: always # 确保服务始终运行

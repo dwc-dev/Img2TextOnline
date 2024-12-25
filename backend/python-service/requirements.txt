@@ -1,0 +1,10 @@
+modelscope[framework]
+torch
+torchvision
+torchaudio
+flask
+flask-cors
+opencv-python
+pyclipper
+shapely
+uwsgi
