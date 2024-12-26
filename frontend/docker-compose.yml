@@ -1,5 +1,6 @@
 services:
-  i2t-frontend:
+  frontend:
+    container_name: i2t-frontend
     build:
       context: .
       dockerfile: Dockerfile
