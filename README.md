@@ -5,6 +5,7 @@
 执行以下命令：
 ```bash
 git clone https://github.com/dwc-dev/Img2TextOnline.git
+cd Img2TextOnline
 docker-compose up
 ```
 待前后端容器启动成功后打开 http://localhost:8080
@@ -14,6 +15,7 @@ docker-compose up
 克隆项目
 ```bash
 git clone https://github.com/dwc-dev/Img2TextOnline.git
+cd Img2TextOnline
 ```
 
 根据实际情况修改docker-compose.yml中的后端接口地址，然后执行以下命令：
