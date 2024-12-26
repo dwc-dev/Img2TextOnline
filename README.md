@@ -18,7 +18,7 @@ git clone https://github.com/dwc-dev/Img2TextOnline.git
 cd Img2TextOnline
 ```
 
-根据实际情况修改docker-compose.yml中的后端接口地址，然后执行以下命令：
+根据实际情况修改`docker-compose.yml`中的后端接口地址，然后执行以下命令：
 ```bash
 docker-compose up --build -d
 ```
@@ -36,11 +36,11 @@ server {
     listen 80;
     
     location / {
-        proxy_pass http://i2t-frontend:80; # 前端容器
+        proxy_pass http://localhost:8080; # 前端容器
     }
 
     location /api/ {
-        proxy_pass http://i2t-backend:8000; # 后端容器
+        proxy_pass http://localhost:8000; # 后端容器
     }
 }
 ```
