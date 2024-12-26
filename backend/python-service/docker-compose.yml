@@ -1,5 +1,6 @@
 services:
-  i2t-backend:
+  backend:
+    container_name: i2t-backend
     build:
       context: .
       dockerfile: Dockerfile
