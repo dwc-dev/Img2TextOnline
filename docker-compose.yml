@@ -1,5 +1,6 @@
 services:
-  i2t-frontend:
+  frontend:
+    container_name: i2t-frontend
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -9,7 +10,8 @@ services:
       - "8080:80"
     restart: always # 确保服务始终运行
 
-  i2t-backend:
+  backend:
+    container_name: i2t-backend
     build:
       context: ./backend/python-service
       dockerfile: Dockerfile
