@@ -22,13 +22,13 @@ docker-compose up --build -d
 ```
 此命令将启动前端和后端容器。
 
-可以通过 Nginx 将前后端整合到一个域名下，例如：
+推荐通过 Nginx 结合反向代理将前后端整合到一个域名下，例如：
 
 前端：http://example.com/
 
 后端：http://example.com/api/
 
-配置示例（Nginx）：
+反向代理配置示例（Nginx）：
 ```nginx
 server {
     listen 80;
