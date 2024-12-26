@@ -101,7 +101,7 @@ def draw_detected_boxes(image_full, det_result):
     return base64_image
 
 
-@app.route("/process_image", methods=["POST"])
+@app.route("/api/process_image", methods=["POST"])
 def process_image():
     """处理上传的图像并返回检测和识别结果"""
     try:

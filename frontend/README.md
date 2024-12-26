@@ -77,6 +77,13 @@ yarn build
 yarn lint
 ```
 
+### Docker启动
+
+```bash
+docker-compose up
+```
+tips:注意配置好正确的后端接口地址
+
 ## 注意事项
 
 - 确保后端服务已启动并监听 8080 端口

@@ -76,6 +76,7 @@ import { ref } from "vue";
 import ImageUpload from "@/components/ImageUpload.vue";
 
 const isLoading = ref(false); // 控制 loading 状态
+const apiUrl = process.env.VUE_APP_API_URL; // 后端接口地址
 
 // 定义检测结果的类型
 interface Detection {
@@ -112,7 +113,7 @@ const oneClickIdentify = async () => {
   formData.append("image", blob, "uploaded_image.png"); // 将 Blob 添加到 FormData
 
   try {
-    const result = await fetch("http://localhost:8000/process_image", {
+    const result = await fetch(apiUrl, {
       method: "POST",
       body: formData, // 发送图片到后端进行处理
     });

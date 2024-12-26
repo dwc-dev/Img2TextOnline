@@ -1,0 +1,18 @@
+services:
+  i2t-frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VUE_APP_API_URL: http://localhost:8000/api/process_image # 后端接口地址，根据实际情况修改
+    ports:
+      - "8080:80"
+    restart: always # 确保服务始终运行
+
+  i2t-backend:
+    build:
+      context: ./backend/python-service
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000" # 映射主机的8000端口到容器的8000端口
+    restart: always # 确保服务始终运行
