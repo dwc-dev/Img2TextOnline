@@ -13,10 +13,9 @@
 实现的API：
 返回图片中检测到的文字框坐标、对应的文字内容，以及绘制了文字框的处理后的图片的 Base64 编码
 
-注:本项目中部分代码参考自[https://modelscope.cn/headlines/article/42](https://modelscope.cn/headlines/article/42)
+注：本项目中部分代码参考自[https://modelscope.cn/headlines/article/42](https://modelscope.cn/headlines/article/42)
 
-### Docker启动
-
+## Docker启动
 ```bash
 docker-compose up
 ```
@@ -97,16 +96,16 @@ HTTP 状态码：`200 OK`
 ### 错误响应
 
 #### 错误格式
-HTTP 状态码：`400` 或其他错误码
+HTTP 状态码：`400` 或 `500`
 
-##### 示例响应
+#### 错误响应示例
 ```json
 {
   "error": "No image file provided."
 }
 ```
 
-##### 常见错误
+#### 错误类型
 | 状态码 | 错误信息                  | 说明                           |
 | ------ | ------------------------- | ------------------------------ |
 | `400`  | `No image file provided.` | 未提供图片文件                 |
